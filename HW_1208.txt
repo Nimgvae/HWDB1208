@@ -1,0 +1,9 @@
+1. db.users.count({ "status": "blocked" })
+2. db.users.distinct("country", { "status": { "$ne": "blocked" } })
+3. db.users.updateMany({ "country": "China" }, { "$set": { "status": "blocked" } })
+4. b.users.updateMany({ "status": { "$ne": "blocked" } }, { "$inc": { "balance": 100 } })
+5. db.reactions.insertMany([
+  { "user_id": "user_id_1", "reaction_type": "like" },
+  { "user_id": "user_id_2", "reaction_type": "heart" },
+  { "user_id": "user_id_3", "reaction_type": "smile" }
+])
